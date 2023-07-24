@@ -177,7 +177,7 @@ func (fs FS) Stat() (Stat, error) {
 	return procStat, nil
 }
 
-// parseStat parses the metrics from /proc/[pid]/stat.
+// parseStat parses the metrics from /proc/stat.
 func parseStat(r io.Reader, fileName string) (Stat, error) {
 	var (
 		scanner = bufio.NewScanner(r)
